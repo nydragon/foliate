@@ -662,8 +662,10 @@ try {
         }
     }
     else {
+        try { 
+        console.log(text)
         const feed = JSON.parse(text)
-        await renderFeed(feed, url)
+        await renderFeed(feed, url) } catch {}
     }
 } catch (e) {
     console.error(e)
